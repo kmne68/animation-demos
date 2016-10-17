@@ -26,6 +26,8 @@ public class Keys extends JPanel{
     // Key directions
     public boolean right = false;
     public boolean left = false;
+    public boolean up = false;
+    public boolean down = false;
     
     public Keys(MainDisplay mainDisplay, Images image) {
         
@@ -37,11 +39,15 @@ public class Keys extends JPanel{
                 
                 if(e.getKeyCode() == KeyEvent.VK_D) {
                     right = true;
-            //        entity.x += 1;
                 }
                 if(e.getKeyCode() == KeyEvent.VK_A) {
                     left = true;
-             //       entity.x -= 1;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_W) {
+                    up = true;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_S) {
+                    down = true;
                 }
             }
                 
@@ -51,6 +57,12 @@ public class Keys extends JPanel{
                 }
                 if(e.getKeyCode() == KeyEvent.VK_A) {
                     left = false;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_W) {
+                    up = false;
+                }
+                if(e.getKeyCode() == KeyEvent.VK_S) {
+                    down = false;
                 }
             }
         });
@@ -69,6 +81,12 @@ public class Keys extends JPanel{
         }
         if(left) {
             entity.x -= 1;
+        }
+        if(up) {
+            entity.y -= 1;
+        }
+        if(down) {
+            entity.y += 1;
         }
         repaint();
     }
