@@ -27,8 +27,8 @@ public class MainDisplay extends JFrame {
         viewPort.setLayout(new GridLayout(1, 1, 0, 0));
         this.setLayout(new GridLayout(1, 1, 0, 0));
         
-    //    viewPort.add(key);
-        viewPort.add(image);
+        viewPort.add(key);
+        this.add(image);
         
         
     }
